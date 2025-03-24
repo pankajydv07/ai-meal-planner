@@ -6,12 +6,15 @@
         "use": "@vercel/node"
       }
     ],
+    "functions": {
+        "server.js": {
+            "maxDuration": 30
+        }
+    },
     "routes": [
-     
       {
         "src": "/(.*)",
         "dest": "/server.js"
       }
     ]
-  }
-  
+}
