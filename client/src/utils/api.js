@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 // client/src/utils/api.js
-const API_URL = 'https://ai-meal-planner-backen.vercel.app/api'
+const API_URL = 'https://server-production-3796.up.railway.app/api'
 
 // User API calls
 export const loginUser = async (loginData) => {
