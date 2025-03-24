@@ -47,8 +47,8 @@ app.listen(5000, () => {
 
 
 
-  app.get('*', (req, res) => {
-    res.status(200).send('API is running');
+  app.get('/', (req, res) => {
+    res.send({status:'working fine',error:false})
   });
 
 
