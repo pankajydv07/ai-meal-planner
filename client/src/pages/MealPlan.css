@@ -1,0 +1,346 @@
+/* MealPlan.css */
+
+.meal-plan-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .meal-plan-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .meal-plan-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  
+  .page-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+  }
+  
+  .generate-button {
+    padding: 0.75rem 1.25rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .generate-button:hover:not(:disabled) {
+    background-color: #2563eb;
+  }
+  
+  .generate-button.generating {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+  }
+  
+  .generating-text {
+    display: flex;
+    align-items: center;
+  }
+  
+  .dots {
+    animation: pulse 1.5s infinite;
+    margin-left: 0.25rem;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+  
+  .error-message {
+    background-color: #fee2e2;
+    border: 1px solid #fecaca;
+    color: #b91c1c;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 16rem;
+  }
+  
+  .loading-spinner {
+    width: 3rem;
+    height: 3rem;
+    border: 0.25rem solid #e5e7eb;
+    border-top-color: #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 16rem;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .empty-primary-text {
+    color: #4b5563;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+  
+  .empty-secondary-text {
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+  
+  .meal-plans-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .plan-tabs {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .plan-tab {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    border-radius: 0.5rem 0.5rem 0 0;
+    background-color: #f3f4f6;
+    color: #4b5563;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .plan-tab:hover:not(.active) {
+    background-color: #e5e7eb;
+  }
+  
+  .plan-tab.active {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  .active-plan {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .plan-header {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .plan-header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  @media (min-width: 640px) {
+    .plan-header-content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  
+  .plan-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+  }
+  
+  .calorie-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: #dbeafe;
+    color: #1e40af;
+    font-size: 0.875rem;
+    border-radius: 9999px;
+    font-weight: 500;
+  }
+  
+  .meal-categories {
+    padding: 1rem;
+  }
+  
+  .meal-category {
+    margin-bottom: 1.5rem;
+  }
+  
+  .meal-category:last-child {
+    margin-bottom: 0;
+  }
+  
+  .category-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 0.75rem;
+  }
+  
+  .meal-cards-container {
+    position: relative;
+  }
+  
+  .meal-cards-scroll {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    gap: 1rem;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .meal-cards-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+  
+  .meal-card-wrapper {
+    flex-shrink: 0;
+    width: 16rem;
+  }
+
+  .meal-days {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .meal-day {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    background-color: #f9fafb;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .day-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+  
+  .meal-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+  }
+  
+  .meal-card-wrapper {
+    width: 100%;
+  }
+
+  /* Add these styles to MealPlan.css */
+.header-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.instruction-toggle-button {
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.instruction-toggle-button:hover {
+  background-color: #f5f5f5;
+}
+
+.instructions-container {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.instructions-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.instructions-hint {
+  display: block;
+  margin-top: 8px;
+  color: #666;
+  font-size: 12px;
+}
+
+.custom-instructions {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+}
+
+.instructions-label {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.plan-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
