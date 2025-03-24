@@ -3,10 +3,7 @@ import axios from 'axios';
 
 
 // client/src/utils/api.js
-const API_URL = process.env.NODE_ENV === 'production' 
-  ? '/api' 
-  : 'http://localhost:5000/api';
-
+const API_URL = '/api'
 
 // User API calls
 export const loginUser = async (loginData) => {
