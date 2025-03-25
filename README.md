@@ -61,7 +61,7 @@ AI Meal Planner is a MERN stack application that generates personalized meal pla
    Backend:
    ```bash
    cd ../server
-   npm start
+   node server.js
    ```
    
    Frontend:
