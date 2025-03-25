@@ -2,8 +2,8 @@ const OpenAI = require('openai');
 const dotenv = require('dotenv');
 dotenv.config();
 
-const OPENAI_API_KEY = 'eyJhbGciOiJIUzI1NiIsImtpZCI6IlV6SXJWd1h0dnprLVRvdzlLZWstc0M1akptWXBvX1VaVkxUZlpnMDRlOFUiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJnb29nbGUtb2F1dGgyfDEwOTY4NzExNTc1NzY5MzEyMzMxNCIsInNjb3BlIjoib3BlbmlkIG9mZmxpbmVfYWNjZXNzIiwiaXNzIjoiYXBpX2tleV9pc3N1ZXIiLCJhdWQiOlsiaHR0cHM6Ly9uZWJpdXMtaW5mZXJlbmNlLmV1LmF1dGgwLmNvbS9hcGkvdjIvIl0sImV4cCI6MTkwMDUyNzA5MCwidXVpZCI6ImEyNTIxYWNmLTcxMGItNDAxOC05MTJkLWNiNGE3NGFmNTFjMCIsIm5hbWUiOiJQQU5LQUoiLCJleHBpcmVzX2F0IjoiMjAzMC0wMy0yM1QyMDoxMTozMCswMDAwIn0.Jb3dagqFAvhFZ1klY2ShzaOPzp8xIHiHt430R92yim4'
-// Initialize the OpenAI client with Nebius configuration
+const OPENAI_API_KEY = your_nebius_apikey
+  //Initialize the OpenAI client with Nebius configuration
 const client = new OpenAI({
   baseURL: 'https://api.studio.nebius.ai/v1/',
   apiKey: OPENAI_API_KEY,
