@@ -22,7 +22,7 @@ app.use(express.json());
 
 
 async function main() {
-    await mongoose.connect('mongodb+srv://techyguides8:tCUYecjIdwGgP0Oo@cluster0.xnbcp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+    await mongoose.connect(your_database_url);
 }
 
 // Connect to MongoDB
