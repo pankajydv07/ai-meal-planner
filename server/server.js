@@ -22,7 +22,7 @@ app.use(express.json());
 
 
 async function main() {
-    await mongoose.connect('mongodb+srv://techyguides8:tCUYecjIdwGgP0Oo@cluster0.xnbcp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+    await mongoose.connect(your_database_url);
 }
 
 // Connect to MongoDB
@@ -48,8 +48,8 @@ app.listen(5000, () => {
 
 
 
-  app.get('*', (req, res) => {
-    res.status(200).send('API is running');
+  app.get('/', (req, res) => {
+    res.send({status:'working fine',error:false})
   });
 
 

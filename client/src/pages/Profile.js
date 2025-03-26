@@ -75,6 +75,7 @@ const Profile = () => {
       const updatedUser = await updateUserPreferences(user._id, preferences);
       updateUser(updatedUser);
       setMessage('Profile updated successfully!');
+      navigate('/meal-plan');
     } catch (error) {
       setMessage('Error updating profile. Please try again.');
       console.error('Error updating profile:', error);

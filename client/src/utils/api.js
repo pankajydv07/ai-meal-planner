@@ -5,7 +5,6 @@ import axios from 'axios';
 // client/src/utils/api.js
 const API_URL = 'https://server-production-3796.up.railway.app/api'
 
-
 // User API calls
 export const loginUser = async (loginData) => {
   const response = await axios.post(`${API_URL}/users/login`, loginData);
