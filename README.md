@@ -6,6 +6,7 @@ AI Meal Planner is a MERN stack application that generates personalized meal pla
 
 - 🧠 AI-powered meal plan generation using meta-llama/Meta-Llama-3.1-70B-Instruct by Nebius AI Studio
 - 👤 User account creation and authentication
+- 🤖 ai-powered chat assistant – provides dietary advice and personalized meal suggestions.
 - 🥗 Personalized meal recommendations based on dietary preferences
 - 🧪 Allergy and dietary restriction filtering
 - 🥫 Pantry-based recipe suggestions to reduce food waste
