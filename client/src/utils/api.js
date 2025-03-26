@@ -3,9 +3,7 @@ import axios from 'axios';
 
 
 // client/src/utils/api.js
-const API_URL = process.env.NODE_ENV === 'production' 
-  ? '/api' 
-  : 'http://localhost:5000/api';
+const API_URL = 'https://server-production-3796.up.railway.app/api'
 
 
 // User API calls
@@ -52,5 +50,15 @@ export const getUserMealHistory = async (userId) => {
 
 export const deleteMealPlan = async (planId) => {
   const response = await axios.delete(`${API_URL}/meals/plan/${planId}`);
+  return response.data;
+};
+
+// Update this function in your api.js file
+export const getChatbotResponse = async (message, history = [], userPreferences = null) => {
+  const response = await axios.post(`${API_URL}/chatbot/message`, { 
+    message, 
+    history,
+    userPreferences 
+  });
   return response.data;
 };

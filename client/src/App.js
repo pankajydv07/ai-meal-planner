@@ -8,6 +8,7 @@ import MealPlan from './pages/MealPlan';
 import MealHistory from './pages/MealHistory';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import ChatBot from './components/ChatBot/ChatBot';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -27,6 +28,7 @@ function App() {
               <Route path="/signup" element={<Signup />} />
             </Routes>
           </div>
+          <ChatBot /> 
         </div>
       </Router>
     </UserProvider>
